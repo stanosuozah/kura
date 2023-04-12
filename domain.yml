@@ -1,0 +1,126 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - fifa_world_cup
+  - number_of_games
+  - sponsors
+  - broadcast_channels
+  - fun_facts
+  - all_fixtures
+  - world_cup_history
+  - team_games
+  - best_players
+  - highest_goalscorer
+  - stadiums
+  - thankyou
+
+entities:
+  - team
+
+slots:
+  team:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: team
+
+responses:
+  utter_greet:
+    - text: >-
+        Hello I am KURA, click any of the buttons to learn more:
+      buttons:
+        - title: "Team's Game"
+          payload: "/all_fixtures"
+        - title: "Qatar 2022 Stadium"
+          payload: "/stadiums"
+        - title: "General World Cup History"
+          payload: "/world_cup_history"
+        - title: "Fun Facts about the world cup"
+          payload: "/fun_facts"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_ask_team:
+    - text: "Sure, can you please enter the team name?"
+
+  utter_thankyou:
+    - text: "You are welcome. Glad I was able to help you"
+
+  utter_fifa_world_cup:
+    - text: |
+        The FIFA World Cup, often simply called the World Cup, is an international association football competition contested by the senior men's national teams of the members of the Fédération Internationale de Football Association (FIFA), the sport's global governing body. The tournament has been held every four years since the inaugural tournament in 1930, except in 1942 and 1946 when it was not held because of the Second World War. The reigning champions are Argentina, who won their third title at the 2022 tournament.
+
+  utter_number_of_games:
+    - text: "The 1998 World Cup Finals in France saw a change to the format that had been used for the previous four tournaments. The format for the finals was initially changed for the 1982 World Cup in Spain in which 24 teams participated. The current format, first implemented in France 1998, sees 32 teams split into eight groups of four. As a result, the last six editions of the World Cup, including the latest World Cup in Russia in 2022, featured 64 games."
+
+  utter_sponsors:
+    - text: "Yes, Here is a list of Major Sponsors of 2022 Qatar World Cup; Adidas, Coca-Cola, Wanda Group, Qatar Airways, Anheuser-Busch InBev, Hyundai Motor Group, Qatar National Bank (QNB)!."
+
+  utter_broadcast_channels:
+    - text: "The major Broadcast Channel for the Qatar World Cup are; beIN Media Group, Bukhatir Group, Ooredoo!."
+
+  utter_stadiums:
+    - text: "There are 8 stadiums that will be used for the World Cup 2022. They are: Al Bayt Stadium,</br> Al Janoub Stadium,</br> Education City Stadium,</br> Khalifa International Stadium,</br> Lusail Iconic Stadium,</br> Ras Abu Aboud Stadium,</br> Ras Al-Khaimah Stadium,</br> and Umm Salal Stadium!</br>"
+
+  utter_highest_goalscorer:
+    - text: "Among the Great Players to grace the World Cup, Miroslav Klose is the all-time leading scorer in World Cup history with 16 goals. He won the tournament with Germany in 2014 and also finished as a runner-up in 2002 and 2006!."
+
+  utter_best_players:
+    - text: |
+        . Pelé (Brazil) </br>
+        . Diego Maradona (Argentina) </br>
+        . Zinedine Zidane (France) </br>
+        . Ronaldo (Brazil) </br>
+        . Johan Cruyff (Netherlands) </br>
+        . Michel Platini (France)</br>
+        . Cristiano Ronaldo </br>
+        . Miroslav Klose (Germany)</br>
+
+  utter_fun_facts:
+    - text: |
+        1) Football players average 9.65 kilometers (5.9 miles) per game in the first 32 matches of the 2022 World Cup.</br>
+        2) A record of 172 goals was scored at the 2022 World Cup, surpassing the 1998 and 2014 competition records.</br>
+        3) During the 2022 World Cup, five penalty shootouts were held, the most in the competition's history.</br>
+        4) As a result of winning the Golden Ball at two different World Cups, Lionel Messi became the first player to achieve this feat.</br>
+        5) In a single edition of the World Cup, Lionel Messi became the first player to score in the group stage, the round of 16, quarter-final, semi-final, and final</br>
+        6) In the round of 16, there were teams from all continents for the first time in FIFA World Cup history.</br>
+        7) Cristiano Ronaldo was the first player in the history of the tournament to score in five editions.</br>
+        You can check this link for more fun facts </br> <a href="https://historyofsoccer.info/world-cup-facts">Click on this link for world cup facts</a>
+  utter_world_cup_history:
+    - text: |
+        The FIFA World Cup is a global football (soccer) tournament held every four years.</br> 
+        The first World Cup was held in 1930 in Uruguay, and it has since become one of the most widely viewed and celebrated sporting events in the world.</br>
+        The World Cup consists of 32 teams competing over the course of several weeks in a knockout tournament.</br> 
+        The winning team is crowned the world champion and receives the coveted FIFA World Cup trophy.
+        Over the years, the World Cup has been the stage for some of the most memorable moments in football history, including legendary performances by players like </br> 
+        Pele, Diego Maradona, Zinedine Zidane, and Lionel Messi. </br>
+        The tournament has also had its share of upsets, with unexpected teams like North Korea, Cameroon, and Senegal making deep runs into the competition.
+        You can check this link for more world cup history </br> <a href="https://www.foxsports.com/soccer/2022-fifa-world-cup/history">Click on this link for world cup history </a>
+actions:
+  - show_fixtures
+  - team_matches
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

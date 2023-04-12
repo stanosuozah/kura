@@ -1,0 +1,234 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: fifa_world_cup
+    examples: |
+      - What exactly is the FIFA World Cup?
+      - Could you explain what the FIFA World Cup is?
+      - I'd like to know what the FIFA World Cup means, can you tell me?
+      - Can you describe what the FIFA World Cup is?
+      - What is meant by the term FIFA World Cup?
+      - In simple terms, what is the FIFA World Cup?
+
+  - intent: number_of_games
+    examples: |
+      - How many matches were held in the FIFA World Cup?
+      - What is the total count of games played in the FIFA World Cup?
+      - Can you tell me the number of matches that took place in the FIFA World Cup?
+      - In the FIFA World Cup, what is the quantity of games played?
+      - How many games were played throughout the FIFA World Cup tournament?
+
+  - intent: sponsors
+    examples: |
+      - Can you tell me who the Sponsors of this World Cup are?
+      - Who are the entities sponsoring the current World Cup?
+      - Could you provide me with information about the sponsors of the World Cup?
+      - I'm curious to know which companies are backing the World Cup. Can you tell me?
+      - Which organizations have signed up as sponsors for the ongoing World Cup event?
+      - Can you inform me of the corporate sponsors involved in the World Cup at present?
+      - Who are the official sponsors of the World Cup that is taking place currently?
+
+  - intent: broadcast_channels
+    examples: |
+      - Who are the major Broadcast Channels for the World Cup?
+      - What are the primary television networks broadcasting the World Cup?
+      - Can you name the major media outlets airing the World Cup?
+      - I'm interested to know which broadcasting channels are showing the World Cup. Could you tell me?
+      - Which TV channels have secured the rights to broadcast the current World Cup?
+      - Could you provide me with a list of the major broadcast networks that are showing the World Cup?
+      - Who are the key television channels that have acquired the broadcasting rights for the World Cup?
+
+  - intent: fun_facts
+    examples: |
+      - Tell me fun facts about the world cup?
+      - Can you provide me with some interesting trivia about the World Cup?
+      - I'm curious to know some entertaining facts about the World Cup. Could you share some?
+      - What are some fun and surprising details about the World Cup that I may not be aware of?
+      - Could you enlighten me with some fascinating information about the history of the World Cup?
+      - I'm looking for some enjoyable and amusing facts about the World Cup. Do you have any to share?
+      - What are some lighthearted and intriguing facts about the World Cup that might surprise me?
+
+  - intent: all_fixtures
+    examples: |
+      - show me all of the matches that were played in the world cup?
+      - Can you display a complete list of all the matches that have been played in the World Cup?
+      - I'm interested in seeing a comprehensive record of all the World Cup matches played. Could you provide that?
+      - Is it possible for you to show me a detailed list of every match that has taken place in the World Cup?
+      - Could you present me with a full rundown of all the World Cup games that have been played?
+      - I would like to review a complete inventory of all World Cup matches that have taken place. Can you show me that?
+
+  - intent: world_cup_history
+    examples: |
+      - Please give me a brief of World Cup History!
+      - Can you provide me with a brief overview of the history of the World Cup?
+      - I would appreciate it if you could summarize the history of the World Cup in a few sentences.
+      - Could you give me a concise summary of the World Cup's past?
+      - Please give me a short account of the history of the World Cup.
+      - Would you mind providing me with a brief history of the World Cup?
+      - A brief history of the World Cup, could you give me one?
+
+  - intent: team_games
+    examples: |
+      - I want to view the matches of [spain](team) 
+      - [england](team) 
+      - [qatar](team) 
+      - Can you show me the mathes that [portugal] played?(team)
+      - I want to see all of the matches of [Argentina]{"entity":"team","value":"Argentina"}
+      - I want to see all of the matches of [croatia]{"entity":"team","value":"croatia"}
+      - Can you show me the mathes that [portugal] played?(team)
+      - I want to see all of the matches of [portugal]{"entity":"team","value":"portugal"}
+      - I want to see all of the matches of [Canada]{"entity":"team","value":"Canada"}    
+      - Can you show me the mathes that [Canada](team) played
+      - I want to see all of the matches of [Craoatia]{"entity":"team","value":"Craoatia"}
+      - I want to see all of the matches of [England]{"entity":"team","value":"England"}
+      - Can you show me the mathes that [uruguay] played?(uruguay)
+      - I want to see all of the matches of [ghana]{"entity":"team","value":"ghana"}
+      - I want to see all of the matches of [pakistan]{"entity":"team","value":"pakistan"}
+      - Can you show me the mathes that [mexico] played?(team)
+      - I want to see all of the matches of [denmark]{"entity":"team","value":"denmark"}
+      - I want to see all of the matches of [france]{"entity":"team","value":"france"}    
+      - Can you show me the mathes that [Cameroon](team) played
+      - I want to see all of the matches of [costa rica]{"entity":"team","value":"costa rica"}
+      - I want to see all of the matches of [korea republic]{"entity":"team","value":"korea republic"}
+      - Can you show me the mathes that [iran] played?(iran)
+      - I want to see all of the matches of [tunisia]{"entity":"team","value":"tunisia"}
+      - I want to see all of the matches of [poland]{"entity":"team","value":"poland"}
+      - Can you show me the mathes that [serbia] played?(team)
+      - I want to see all of the matches of [brazil]{"entity":"team","value":"brazil"}
+      - I want to see all of the matches of [united states]{"entity":"team","value":"united states"}    
+      - Can you show me the mathes that [japan](team) played
+      - I want to see all of the matches of [Saudi arabia]{"entity":"team","value":"saudi arabia"}
+      - I want to see all of the matches of [senegal]{"entity":"team","value":"senegal"}
+
+  - intent: best_players
+    examples: |
+      - May I Know more about Great World Cup Players?
+      - Could you provide some information about legendary World Cup players?
+      - Who are some of the best World Cup players of all time?
+      - I'm curious about the top World Cup players in history. Can you enlighten me?
+      - Can you tell me about the most outstanding World Cup players to ever grace the pitch?
+      - Which players are considered the greatest in World Cup history?
+      - I'd like to know more about the all-time greats of the World Cup. Can you help me out?
+      - Who are the most iconic World Cup players that have ever played the game?
+
+  - intent: highest_goalscorer
+    examples: |
+      - Tell me who the highest GoalScorer in World Cup history?
+      - Who holds the record for the most goals scored in World Cup history?
+      - Can you tell me which player has scored the most goals in World Cup tournaments?
+      - I'm curious to know who the all-time leading goal scorer in World Cup history is. Could you enlighten me?
+      - Which footballer has scored the highest number of goals in the history of the World Cup?
+      - Who is the player that holds the record for the most goals ever scored in the World Cup?
+      - I'd like to know who the top goal scorer in the history of the World Cup is. Can you provide me with the information?
+      - Could you tell me the name of the footballer who has scored the most goals in World Cup tournaments throughout history?
+      - Who is the World Cup's highest goal scorer of all time?
+
+  - intent: stadiums
+    examples: |
+      - Which stadiums will be used for the World Cup 2022?
+      - Can you provide me with a list of stadiums that will be used for the 2022 World Cup?
+      - Which stadiums are scheduled to be utilized for the 2022 World Cup?
+      - What are the names of the stadiums that will host the 2022 World Cup?
+      - I'm curious, which stadiums have been selected for the 2022 World Cup?
+      - Could you inform me about the stadiums that will be used for the 2022 World Cup?
+      - Which venues are set to host the 2022 World Cup matches?
+      - Can you tell me the names of the stadiums that have been chosen for the 2022 World Cup?
+      - I'd like to know which stadiums have been designated as hosts for the 2022 World Cup, could you tell me?
+
+  - intent: thankyou
+    examples: |
+      - thanks
+      - thankyou
+      - thank you so much
+      - thank you for your help
+      - thankkkk
+      - thanks for your help

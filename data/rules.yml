@@ -1,0 +1,62 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: tell what fifa is
+    steps:
+      - intent: fifa_world_cup
+      - action: utter_fifa_world_cup
+
+  - rule: tell number of games
+    steps:
+      - intent: number_of_games
+      - action: utter_number_of_games
+
+  - rule: tell sponsors
+    steps:
+      - intent: sponsors
+      - action: utter_sponsors
+
+  - rule: fun facts
+    steps:
+      - intent: fun_facts
+      - action: utter_fun_facts
+
+  - rule: broadcast channels
+    steps:
+      - intent: broadcast_channels
+      - action: utter_broadcast_channels
+
+  - rule: world cup history
+    steps:
+      - intent: world_cup_history
+      - action: utter_world_cup_history
+
+  - rule: highest scorer
+    steps:
+      - intent: highest_goalscorer
+      - action: utter_highest_goalscorer
+
+  - rule: best player
+    steps:
+      - intent: best_players
+      - action: utter_best_players
+
+  - rule: stadiums
+    steps:
+      - intent: stadiums
+      - action: utter_stadiums
+
+  - rule: Say welcome anytime the user says thankyou
+    steps:
+      - intent: thankyou
+      - action: utter_thankyou
